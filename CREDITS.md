@@ -27,6 +27,9 @@ Alice performed the physical testing, hardware work, listening checks and
 design review. Veyra developed and reviewed the integration, build tooling,
 diagnostics and documentation with Alice. This is explicitly a human/AI
 collaboration, not a claim that all the underlying driver work originated here.
+Alice reviewed the source kit before approving public publication; her
+[release statement](README.md#human-collaborators-statement) accompanies the
+documented testing scope and remaining limitations.
 
 Our work includes the Linux 6.18 SPI adaptation, model-specific Bluetooth PIO
 quirk, narrowed controller/parser integration, opt-in s2idle HDA-link preservation,

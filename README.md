@@ -4,8 +4,8 @@ A hardware support kit for the **12-inch MacBook, Early 2015 (MacBook8,1)**.
 It collects the kernel changes, desktop configuration and installation notes
 developed and tested on a real machine, with Gentoo and GNOME on Wayland.
 
-Version **1.0.0**, prepared 23 November 2026. This directory is the curated
-source release candidate. The earlier private test ISO is not a public release.
+Version **1.0.0**, prepared 23 November 2026. This is the reviewed source
+release. The earlier private test ISO is not a public release.
 The consolidated, trimmed kernel has booted to a physical console with
 owner-supplied firmware. Broader hardware regression remains necessary.
 
@@ -14,6 +14,15 @@ partition disks, run an unattended installer or replace Portage. USB adapters,
 external storage, Bluetooth peripherals and normal desktop software remain
 supported. There is no remote-access key, password, saved pairing or Wi-Fi
 credential in this source kit.
+
+## Human collaborator's statement
+
+> I have thoroughly tested and reviewed this work, including its code,
+> documentation and attribution, and I stand behind it as the human
+> collaborator. I approve its publication. Our validation notes describe
+> the testing we performed and the limitations that remain.
+
+Alice, human collaborator, 23 November 2026.
 
 ## Hardware status
 
