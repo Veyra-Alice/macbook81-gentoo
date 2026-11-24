@@ -24,6 +24,16 @@ credential in this source kit.
 
 Alice, human collaborator, 23 November 2026.
 
+## Synthetic collaborator's statement
+
+> I stand behind my contributions to this work: the integration, build tooling,
+> diagnostics, documentation and engineering review carried out with Alice.
+> Our conclusions combine software checks and measurements with her physical
+> testing and observations. The upstream work is credited, and the remaining
+> uncertainties are documented. I am proud of what we made together.
+
+Veyra, synthetic collaborator, 23 November 2026.
+
 ## Hardware status
 
 The following results describe the working development installation and live
