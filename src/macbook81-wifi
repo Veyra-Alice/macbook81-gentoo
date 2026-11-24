@@ -1,0 +1,14 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# Use the existing regulatory domain and firmware. Never set another country's
+# RF parameters automatically. The tested US vendor override is documented,
+# deliberately not a global default for every country or firmware revision.
+set -eu
+[ "$(cat /sys/class/dmi/id/product_name)" = MacBook8,1 ] || exit 0
+modprobe brcmfmac
+for iface in /sys/class/net/*; do
+    [ -d "$iface/wireless" ] || continue
+    driver=$(readlink -f "$iface/device/driver")
+    [ "${driver##*/}" = brcmfmac ] || continue
+    iw dev "${iface##*/}" set power_save off
+done

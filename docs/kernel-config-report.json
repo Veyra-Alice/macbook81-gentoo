@@ -1,0 +1,3281 @@
+{
+  "profile": "trimmed",
+  "missing_required": [],
+  "lost_peripherals": [],
+  "disabled_groups": {
+    "ATA": "No internal SATA/PATA controller; USB SATA bridges use USB storage",
+    "PCCARD": "No PCMCIA/CardBus slot",
+    "EISA": "No EISA slots",
+    "ISAPNP": "No ISA plug-and-play devices",
+    "FIREWIRE": "No FireWire controller or Thunderbolt expansion",
+    "USB4": "USB-C port carries USB/DisplayPort, not Thunderbolt/USB4",
+    "DRM_AMDGPU": "No AMD discrete GPU or eGPU path",
+    "DRM_RADEON": "No Radeon GPU or eGPU path",
+    "DRM_NOUVEAU": "No NVIDIA GPU or eGPU path",
+    "DRM_XE": "Broadwell graphics use i915",
+    "SND_SOC": "No alternative SoC audio machine; retain HDA, USB and Bluetooth",
+    "SND_FIREWIRE": "No FireWire audio transport",
+    "INFINIBAND": "No InfiniBand PCI adapter or external PCI expansion",
+    "NET_VENDOR_MELLANOX": "No Mellanox PCI adapter",
+    "NET_VENDOR_BROADCOM": "No Broadcom wired PCI NIC; brcmfmac is separate",
+    "NET_VENDOR_INTEL": "No Intel wired PCI NIC; USB Ethernet is separate",
+    "NET_VENDOR_CHELSIO": "No Chelsio PCI adapter",
+    "NET_VENDOR_QLOGIC": "No QLogic PCI adapter",
+    "NET_VENDOR_NETRONOME": "No Netronome PCI adapter",
+    "NET_VENDOR_SOLARFLARE": "No Solarflare PCI adapter",
+    "NET_VENDOR_SFC": "No Solarflare PCI adapter",
+    "SPEAKUP": "Avoid inherited Caps Lock interception; desktop accessibility remains"
+  },
+  "enabled_before": 7486,
+  "enabled_after": 6687,
+  "changes": {
+    "AHCI_DWC": [
+      "m",
+      "n"
+    ],
+    "AIC79XX_CMDS_PER_DEVICE": [
+      "4",
+      "n"
+    ],
+    "AIC79XX_DEBUG_MASK": [
+      "0",
+      "n"
+    ],
+    "AIC79XX_RESET_DELAY_MS": [
+      "15000",
+      "n"
+    ],
+    "AIC7XXX_CMDS_PER_DEVICE": [
+      "4",
+      "n"
+    ],
+    "AIC7XXX_DEBUG_MASK": [
+      "0",
+      "n"
+    ],
+    "AIC7XXX_RESET_DELAY_MS": [
+      "15000",
+      "n"
+    ],
+    "ATA": [
+      "y",
+      "n"
+    ],
+    "ATA_ACPI": [
+      "y",
+      "n"
+    ],
+    "ATA_BMDMA": [
+      "y",
+      "n"
+    ],
+    "ATA_FORCE": [
+      "y",
+      "n"
+    ],
+    "ATA_GENERIC": [
+      "m",
+      "n"
+    ],
+    "ATA_PIIX": [
+      "y",
+      "n"
+    ],
+    "ATA_SFF": [
+      "y",
+      "n"
+    ],
+    "ATA_VERBOSE_ERROR": [
+      "y",
+      "n"
+    ],
+    "B44": [
+      "m",
+      "n"
+    ],
+    "B44_PCI": [
+      "y",
+      "n"
+    ],
+    "B44_PCICORE_AUTOSELECT": [
+      "y",
+      "n"
+    ],
+    "B44_PCI_AUTOSELECT": [
+      "y",
+      "n"
+    ],
+    "BCMGENET": [
+      "m",
+      "n"
+    ],
+    "BE2ISCSI": [
+      "m",
+      "n"
+    ],
+    "BLK_DEV_3W_XXXX_RAID": [
+      "m",
+      "n"
+    ],
+    "BLK_DEV_RNBD": [
+      "y",
+      "n"
+    ],
+    "BLK_DEV_RNBD_CLIENT": [
+      "m",
+      "n"
+    ],
+    "BLK_DEV_RNBD_SERVER": [
+      "m",
+      "n"
+    ],
+    "BNGE": [
+      "m",
+      "n"
+    ],
+    "BNX2": [
+      "m",
+      "n"
+    ],
+    "BNX2X": [
+      "m",
+      "n"
+    ],
+    "BNX2X_SRIOV": [
+      "y",
+      "n"
+    ],
+    "BNXT": [
+      "m",
+      "n"
+    ],
+    "BNXT_DCB": [
+      "y",
+      "n"
+    ],
+    "BNXT_FLOWER_OFFLOAD": [
+      "y",
+      "n"
+    ],
+    "BNXT_HWMON": [
+      "y",
+      "n"
+    ],
+    "BNXT_SRIOV": [
+      "y",
+      "n"
+    ],
+    "BRCMDBG": [
+      "y",
+      "n"
+    ],
+    "BTREE": [
+      "y",
+      "n"
+    ],
+    "BT_HCIBLUECARD": [
+      "m",
+      "n"
+    ],
+    "BT_HCIBT3C": [
+      "m",
+      "n"
+    ],
+    "BT_HCIDTL1": [
+      "m",
+      "n"
+    ],
+    "CARDBUS": [
+      "y",
+      "n"
+    ],
+    "CHELSIO_INLINE_CRYPTO": [
+      "y",
+      "n"
+    ],
+    "CHELSIO_IPSEC_INLINE": [
+      "m",
+      "n"
+    ],
+    "CHELSIO_LIB": [
+      "m",
+      "n"
+    ],
+    "CHELSIO_T1": [
+      "m",
+      "n"
+    ],
+    "CHELSIO_T1_1G": [
+      "y",
+      "n"
+    ],
+    "CHELSIO_T3": [
+      "m",
+      "n"
+    ],
+    "CHELSIO_T4": [
+      "m",
+      "n"
+    ],
+    "CHELSIO_T4VF": [
+      "m",
+      "n"
+    ],
+    "CHELSIO_T4_DCB": [
+      "y",
+      "n"
+    ],
+    "CHELSIO_TLS_DEVICE": [
+      "m",
+      "n"
+    ],
+    "CNIC": [
+      "m",
+      "n"
+    ],
+    "CRYPTO_DEV_CHELSIO": [
+      "m",
+      "n"
+    ],
+    "DRM_DISPLAY_DP_TUNNEL": [
+      "y",
+      "n"
+    ],
+    "DRM_I915_DP_TUNNEL": [
+      "y",
+      "n"
+    ],
+    "DVB_FIREDTV": [
+      "m",
+      "n"
+    ],
+    "DVB_FIREDTV_INPUT": [
+      "y",
+      "n"
+    ],
+    "E100": [
+      "m",
+      "n"
+    ],
+    "E1000": [
+      "m",
+      "n"
+    ],
+    "E1000E": [
+      "m",
+      "n"
+    ],
+    "E1000E_HWTS": [
+      "y",
+      "n"
+    ],
+    "FCOE": [
+      "m",
+      "n"
+    ],
+    "FCOE_FNIC": [
+      "m",
+      "n"
+    ],
+    "FIREWIRE": [
+      "m",
+      "n"
+    ],
+    "FIREWIRE_NET": [
+      "m",
+      "n"
+    ],
+    "FIREWIRE_OHCI": [
+      "m",
+      "n"
+    ],
+    "FIREWIRE_SBP2": [
+      "m",
+      "n"
+    ],
+    "FM10K": [
+      "m",
+      "n"
+    ],
+    "FWCTL_MLX5": [
+      "m",
+      "n"
+    ],
+    "I40E": [
+      "m",
+      "n"
+    ],
+    "I40EVF": [
+      "m",
+      "n"
+    ],
+    "I82092": [
+      "m",
+      "n"
+    ],
+    "IAVF": [
+      "m",
+      "n"
+    ],
+    "ICE": [
+      "m",
+      "n"
+    ],
+    "ICE_HWMON": [
+      "y",
+      "n"
+    ],
+    "ICE_HWTS": [
+      "y",
+      "n"
+    ],
+    "ICE_SWITCHDEV": [
+      "y",
+      "n"
+    ],
+    "IDPF": [
+      "m",
+      "n"
+    ],
+    "IDPF_SINGLEQ": [
+      "y",
+      "n"
+    ],
+    "IGB": [
+      "m",
+      "n"
+    ],
+    "IGBVF": [
+      "m",
+      "n"
+    ],
+    "IGB_DCA": [
+      "y",
+      "n"
+    ],
+    "IGB_HWMON": [
+      "y",
+      "n"
+    ],
+    "IGC": [
+      "m",
+      "n"
+    ],
+    "IGC_LEDS": [
+      "y",
+      "n"
+    ],
+    "INFINIBAND": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_ADDR_TRANS": [
+      "y",
+      "n"
+    ],
+    "INFINIBAND_ADDR_TRANS_CONFIGFS": [
+      "y",
+      "n"
+    ],
+    "INFINIBAND_BNXT_RE": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_CXGB4": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_EFA": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_ERDMA": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_HFI1": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_IONIC": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_IPOIB": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_IPOIB_CM": [
+      "y",
+      "n"
+    ],
+    "INFINIBAND_IPOIB_DEBUG": [
+      "y",
+      "n"
+    ],
+    "INFINIBAND_IPOIB_DEBUG_DATA": [
+      "y",
+      "n"
+    ],
+    "INFINIBAND_IRDMA": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_ISER": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_ISERT": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_MTHCA": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_MTHCA_DEBUG": [
+      "y",
+      "n"
+    ],
+    "INFINIBAND_OCRDMA": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_ON_DEMAND_PAGING": [
+      "y",
+      "n"
+    ],
+    "INFINIBAND_OPA_VNIC": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_QEDR": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_RDMAVT": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_RTRS": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_RTRS_CLIENT": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_RTRS_SERVER": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_SRP": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_SRPT": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_USER_ACCESS": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_USER_MAD": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_USER_MEM": [
+      "y",
+      "n"
+    ],
+    "INFINIBAND_USNIC": [
+      "m",
+      "n"
+    ],
+    "INFINIBAND_VIRT_DMA": [
+      "y",
+      "n"
+    ],
+    "INFINIBAND_VMWARE_PVRDMA": [
+      "m",
+      "n"
+    ],
+    "IPWIRELESS": [
+      "m",
+      "n"
+    ],
+    "ISCSI_TARGET_CXGB4": [
+      "m",
+      "n"
+    ],
+    "IXGBE": [
+      "m",
+      "n"
+    ],
+    "IXGBEVF": [
+      "m",
+      "n"
+    ],
+    "IXGBEVF_IPSEC": [
+      "y",
+      "n"
+    ],
+    "IXGBE_DCA": [
+      "y",
+      "n"
+    ],
+    "IXGBE_DCB": [
+      "y",
+      "n"
+    ],
+    "IXGBE_HWMON": [
+      "y",
+      "n"
+    ],
+    "IXGBE_IPSEC": [
+      "y",
+      "n"
+    ],
+    "LEDS_TRIGGER_DISK": [
+      "y",
+      "n"
+    ],
+    "LIBETH": [
+      "m",
+      "n"
+    ],
+    "LIBETH_XDP": [
+      "m",
+      "n"
+    ],
+    "LIBFC": [
+      "m",
+      "n"
+    ],
+    "LIBFCOE": [
+      "m",
+      "n"
+    ],
+    "LIBIE": [
+      "m",
+      "n"
+    ],
+    "LIBIE_ADMINQ": [
+      "m",
+      "n"
+    ],
+    "LIBIE_FWLOG": [
+      "m",
+      "n"
+    ],
+    "LOCALVERSION": [
+      "\"-macbook81-r3\"",
+      "\"-macbook81-1.0.0\""
+    ],
+    "MANA_INFINIBAND": [
+      "m",
+      "n"
+    ],
+    "MEGARAID_LEGACY": [
+      "m",
+      "n"
+    ],
+    "MEGARAID_MAILBOX": [
+      "m",
+      "n"
+    ],
+    "MEGARAID_MM": [
+      "m",
+      "n"
+    ],
+    "MEGARAID_NEWGEN": [
+      "y",
+      "n"
+    ],
+    "MEGARAID_SAS": [
+      "m",
+      "n"
+    ],
+    "MFD_CS42L43_SDW": [
+      "m",
+      "n"
+    ],
+    "MLX4_CORE": [
+      "m",
+      "n"
+    ],
+    "MLX4_CORE_GEN2": [
+      "y",
+      "n"
+    ],
+    "MLX4_DEBUG": [
+      "y",
+      "n"
+    ],
+    "MLX4_EN": [
+      "m",
+      "n"
+    ],
+    "MLX4_EN_DCB": [
+      "y",
+      "n"
+    ],
+    "MLX4_INFINIBAND": [
+      "m",
+      "n"
+    ],
+    "MLX5_BRIDGE": [
+      "y",
+      "n"
+    ],
+    "MLX5_CLS_ACT": [
+      "y",
+      "n"
+    ],
+    "MLX5_CORE": [
+      "m",
+      "n"
+    ],
+    "MLX5_CORE_EN": [
+      "y",
+      "n"
+    ],
+    "MLX5_CORE_EN_DCB": [
+      "y",
+      "n"
+    ],
+    "MLX5_CORE_IPOIB": [
+      "y",
+      "n"
+    ],
+    "MLX5_DPLL": [
+      "m",
+      "n"
+    ],
+    "MLX5_EN_ARFS": [
+      "y",
+      "n"
+    ],
+    "MLX5_EN_IPSEC": [
+      "y",
+      "n"
+    ],
+    "MLX5_EN_PSP": [
+      "y",
+      "n"
+    ],
+    "MLX5_EN_RXNFC": [
+      "y",
+      "n"
+    ],
+    "MLX5_EN_TLS": [
+      "y",
+      "n"
+    ],
+    "MLX5_ESWITCH": [
+      "y",
+      "n"
+    ],
+    "MLX5_FPGA": [
+      "y",
+      "n"
+    ],
+    "MLX5_HW_STEERING": [
+      "y",
+      "n"
+    ],
+    "MLX5_INFINIBAND": [
+      "m",
+      "n"
+    ],
+    "MLX5_MACSEC": [
+      "y",
+      "n"
+    ],
+    "MLX5_MPFS": [
+      "y",
+      "n"
+    ],
+    "MLX5_SF": [
+      "y",
+      "n"
+    ],
+    "MLX5_SF_MANAGER": [
+      "y",
+      "n"
+    ],
+    "MLX5_SW_STEERING": [
+      "y",
+      "n"
+    ],
+    "MLX5_TC_CT": [
+      "y",
+      "n"
+    ],
+    "MLX5_TC_SAMPLE": [
+      "y",
+      "n"
+    ],
+    "MLX5_VDPA": [
+      "y",
+      "n"
+    ],
+    "MLX5_VDPA_NET": [
+      "m",
+      "n"
+    ],
+    "MLX5_VFIO_PCI": [
+      "m",
+      "n"
+    ],
+    "MLXFW": [
+      "m",
+      "n"
+    ],
+    "MLXSW_CORE": [
+      "m",
+      "n"
+    ],
+    "MLXSW_CORE_HWMON": [
+      "y",
+      "n"
+    ],
+    "MLXSW_CORE_THERMAL": [
+      "y",
+      "n"
+    ],
+    "MLXSW_I2C": [
+      "m",
+      "n"
+    ],
+    "MLXSW_MINIMAL": [
+      "m",
+      "n"
+    ],
+    "MLXSW_PCI": [
+      "m",
+      "n"
+    ],
+    "MLXSW_SPECTRUM": [
+      "m",
+      "n"
+    ],
+    "MLXSW_SPECTRUM_DCB": [
+      "y",
+      "n"
+    ],
+    "MMC_SDRICOH_CS": [
+      "m",
+      "n"
+    ],
+    "NETXEN_NIC": [
+      "m",
+      "n"
+    ],
+    "NET_9P_RDMA": [
+      "m",
+      "n"
+    ],
+    "NET_VENDOR_BROADCOM": [
+      "y",
+      "n"
+    ],
+    "NET_VENDOR_CHELSIO": [
+      "y",
+      "n"
+    ],
+    "NET_VENDOR_INTEL": [
+      "y",
+      "n"
+    ],
+    "NET_VENDOR_MELLANOX": [
+      "y",
+      "n"
+    ],
+    "NET_VENDOR_NETRONOME": [
+      "y",
+      "n"
+    ],
+    "NET_VENDOR_QLOGIC": [
+      "y",
+      "n"
+    ],
+    "NET_VENDOR_SOLARFLARE": [
+      "y",
+      "n"
+    ],
+    "NET_VENDOR_XIRCOM": [
+      "y",
+      "n"
+    ],
+    "NFP": [
+      "m",
+      "n"
+    ],
+    "NFP_APP_FLOWER": [
+      "y",
+      "n"
+    ],
+    "NFP_NET_IPSEC": [
+      "y",
+      "n"
+    ],
+    "NVME_RDMA": [
+      "m",
+      "n"
+    ],
+    "NVME_TARGET_RDMA": [
+      "m",
+      "n"
+    ],
+    "OBJAGG": [
+      "m",
+      "n"
+    ],
+    "PARMAN": [
+      "m",
+      "n"
+    ],
+    "PARPORT_PC_PCMCIA": [
+      "m",
+      "n"
+    ],
+    "PATA_ACPI": [
+      "m",
+      "n"
+    ],
+    "PATA_ALI": [
+      "m",
+      "n"
+    ],
+    "PATA_AMD": [
+      "m",
+      "n"
+    ],
+    "PATA_ARTOP": [
+      "m",
+      "n"
+    ],
+    "PATA_ATIIXP": [
+      "m",
+      "n"
+    ],
+    "PATA_ATP867X": [
+      "m",
+      "n"
+    ],
+    "PATA_CMD640_PCI": [
+      "m",
+      "n"
+    ],
+    "PATA_CMD64X": [
+      "m",
+      "n"
+    ],
+    "PATA_EFAR": [
+      "m",
+      "n"
+    ],
+    "PATA_HPT366": [
+      "m",
+      "n"
+    ],
+    "PATA_HPT37X": [
+      "m",
+      "n"
+    ],
+    "PATA_HPT3X2N": [
+      "m",
+      "n"
+    ],
+    "PATA_HPT3X3": [
+      "m",
+      "n"
+    ],
+    "PATA_IT8213": [
+      "m",
+      "n"
+    ],
+    "PATA_IT821X": [
+      "m",
+      "n"
+    ],
+    "PATA_JMICRON": [
+      "m",
+      "n"
+    ],
+    "PATA_MARVELL": [
+      "m",
+      "n"
+    ],
+    "PATA_MPIIX": [
+      "m",
+      "n"
+    ],
+    "PATA_NETCELL": [
+      "m",
+      "n"
+    ],
+    "PATA_NINJA32": [
+      "m",
+      "n"
+    ],
+    "PATA_NS87410": [
+      "m",
+      "n"
+    ],
+    "PATA_NS87415": [
+      "m",
+      "n"
+    ],
+    "PATA_OLDPIIX": [
+      "m",
+      "n"
+    ],
+    "PATA_OPTI": [
+      "m",
+      "n"
+    ],
+    "PATA_OPTIDMA": [
+      "m",
+      "n"
+    ],
+    "PATA_PCMCIA": [
+      "m",
+      "n"
+    ],
+    "PATA_PDC2027X": [
+      "m",
+      "n"
+    ],
+    "PATA_PDC_OLD": [
+      "m",
+      "n"
+    ],
+    "PATA_SCH": [
+      "m",
+      "n"
+    ],
+    "PATA_SERVERWORKS": [
+      "m",
+      "n"
+    ],
+    "PATA_SIL680": [
+      "m",
+      "n"
+    ],
+    "PATA_SIS": [
+      "m",
+      "n"
+    ],
+    "PATA_TIMINGS": [
+      "y",
+      "n"
+    ],
+    "PATA_TOSHIBA": [
+      "m",
+      "n"
+    ],
+    "PATA_TRIFLEX": [
+      "m",
+      "n"
+    ],
+    "PATA_VIA": [
+      "m",
+      "n"
+    ],
+    "PATA_WINBOND": [
+      "m",
+      "n"
+    ],
+    "PCCARD": [
+      "y",
+      "n"
+    ],
+    "PCCARD_NONSTATIC": [
+      "y",
+      "n"
+    ],
+    "PCMCIA": [
+      "y",
+      "n"
+    ],
+    "PCMCIA_3C574": [
+      "m",
+      "n"
+    ],
+    "PCMCIA_3C589": [
+      "m",
+      "n"
+    ],
+    "PCMCIA_AXNET": [
+      "m",
+      "n"
+    ],
+    "PCMCIA_LOAD_CIS": [
+      "y",
+      "n"
+    ],
+    "PCMCIA_NMCLAN": [
+      "m",
+      "n"
+    ],
+    "PCMCIA_PCNET": [
+      "m",
+      "n"
+    ],
+    "PCMCIA_SMC91C92": [
+      "m",
+      "n"
+    ],
+    "PCMCIA_XIRC2PS": [
+      "m",
+      "n"
+    ],
+    "PCMCIA_XIRCOM": [
+      "m",
+      "n"
+    ],
+    "PD6729": [
+      "m",
+      "n"
+    ],
+    "PDC_ADMA": [
+      "m",
+      "n"
+    ],
+    "PLDMFW": [
+      "y",
+      "n"
+    ],
+    "QED": [
+      "m",
+      "n"
+    ],
+    "QEDE": [
+      "m",
+      "n"
+    ],
+    "QEDF": [
+      "m",
+      "n"
+    ],
+    "QEDI": [
+      "m",
+      "n"
+    ],
+    "QED_FCOE": [
+      "y",
+      "n"
+    ],
+    "QED_ISCSI": [
+      "y",
+      "n"
+    ],
+    "QED_LL2": [
+      "y",
+      "n"
+    ],
+    "QED_OOO": [
+      "y",
+      "n"
+    ],
+    "QED_RDMA": [
+      "y",
+      "n"
+    ],
+    "QED_SRIOV": [
+      "y",
+      "n"
+    ],
+    "QLA3XXX": [
+      "m",
+      "n"
+    ],
+    "QLCNIC": [
+      "m",
+      "n"
+    ],
+    "QLCNIC_DCB": [
+      "y",
+      "n"
+    ],
+    "QLCNIC_HWMON": [
+      "y",
+      "n"
+    ],
+    "QLCNIC_SRIOV": [
+      "y",
+      "n"
+    ],
+    "RDMA_RXE": [
+      "m",
+      "n"
+    ],
+    "RDMA_SIW": [
+      "m",
+      "n"
+    ],
+    "RDS_RDMA": [
+      "m",
+      "n"
+    ],
+    "REGMAP_SOUNDWIRE": [
+      "m",
+      "n"
+    ],
+    "REGMAP_SOUNDWIRE_MBQ": [
+      "m",
+      "n"
+    ],
+    "REGULATOR_ARIZONA_LDO1": [
+      "m",
+      "n"
+    ],
+    "REGULATOR_ARIZONA_MICSUPP": [
+      "m",
+      "n"
+    ],
+    "SATA_ACARD_AHCI": [
+      "m",
+      "n"
+    ],
+    "SATA_AHCI": [
+      "y",
+      "n"
+    ],
+    "SATA_AHCI_PLATFORM": [
+      "m",
+      "n"
+    ],
+    "SATA_HOST": [
+      "y",
+      "n"
+    ],
+    "SATA_MOBILE_LPM_POLICY": [
+      "3",
+      "n"
+    ],
+    "SATA_MV": [
+      "m",
+      "n"
+    ],
+    "SATA_NV": [
+      "m",
+      "n"
+    ],
+    "SATA_PMP": [
+      "y",
+      "n"
+    ],
+    "SATA_PROMISE": [
+      "m",
+      "n"
+    ],
+    "SATA_QSTOR": [
+      "m",
+      "n"
+    ],
+    "SATA_SIL": [
+      "m",
+      "n"
+    ],
+    "SATA_SIL24": [
+      "m",
+      "n"
+    ],
+    "SATA_SIS": [
+      "m",
+      "n"
+    ],
+    "SATA_SVW": [
+      "m",
+      "n"
+    ],
+    "SATA_SX4": [
+      "m",
+      "n"
+    ],
+    "SATA_ULI": [
+      "m",
+      "n"
+    ],
+    "SATA_VIA": [
+      "m",
+      "n"
+    ],
+    "SATA_VITESSE": [
+      "m",
+      "n"
+    ],
+    "SBP_TARGET": [
+      "m",
+      "n"
+    ],
+    "SCSI_3W_9XXX": [
+      "m",
+      "n"
+    ],
+    "SCSI_3W_SAS": [
+      "m",
+      "n"
+    ],
+    "SCSI_AACRAID": [
+      "m",
+      "n"
+    ],
+    "SCSI_ACARD": [
+      "m",
+      "n"
+    ],
+    "SCSI_ADVANSYS": [
+      "m",
+      "n"
+    ],
+    "SCSI_AIC79XX": [
+      "m",
+      "n"
+    ],
+    "SCSI_AIC7XXX": [
+      "m",
+      "n"
+    ],
+    "SCSI_AM53C974": [
+      "m",
+      "n"
+    ],
+    "SCSI_ARCMSR": [
+      "m",
+      "n"
+    ],
+    "SCSI_BFA_FC": [
+      "m",
+      "n"
+    ],
+    "SCSI_BNX2X_FCOE": [
+      "m",
+      "n"
+    ],
+    "SCSI_BNX2_ISCSI": [
+      "m",
+      "n"
+    ],
+    "SCSI_BUSLOGIC": [
+      "m",
+      "n"
+    ],
+    "SCSI_CHELSIO_FCOE": [
+      "m",
+      "n"
+    ],
+    "SCSI_CXGB3_ISCSI": [
+      "m",
+      "n"
+    ],
+    "SCSI_CXGB4_ISCSI": [
+      "m",
+      "n"
+    ],
+    "SCSI_DC395x": [
+      "m",
+      "n"
+    ],
+    "SCSI_DEBUG": [
+      "m",
+      "n"
+    ],
+    "SCSI_DMX3191D": [
+      "m",
+      "n"
+    ],
+    "SCSI_EFCT": [
+      "m",
+      "n"
+    ],
+    "SCSI_ESAS2R": [
+      "m",
+      "n"
+    ],
+    "SCSI_FDOMAIN": [
+      "m",
+      "n"
+    ],
+    "SCSI_FDOMAIN_PCI": [
+      "m",
+      "n"
+    ],
+    "SCSI_FLASHPOINT": [
+      "y",
+      "n"
+    ],
+    "SCSI_HPSA": [
+      "m",
+      "n"
+    ],
+    "SCSI_HPTIOP": [
+      "m",
+      "n"
+    ],
+    "SCSI_INIA100": [
+      "m",
+      "n"
+    ],
+    "SCSI_INITIO": [
+      "m",
+      "n"
+    ],
+    "SCSI_IPR": [
+      "m",
+      "n"
+    ],
+    "SCSI_IPR_DUMP": [
+      "y",
+      "n"
+    ],
+    "SCSI_IPR_TRACE": [
+      "y",
+      "n"
+    ],
+    "SCSI_IPS": [
+      "m",
+      "n"
+    ],
+    "SCSI_ISCI": [
+      "m",
+      "n"
+    ],
+    "SCSI_LPFC": [
+      "m",
+      "n"
+    ],
+    "SCSI_MPI3MR": [
+      "m",
+      "n"
+    ],
+    "SCSI_MPT2SAS": [
+      "m",
+      "n"
+    ],
+    "SCSI_MPT2SAS_MAX_SGE": [
+      "128",
+      "n"
+    ],
+    "SCSI_MPT3SAS": [
+      "m",
+      "n"
+    ],
+    "SCSI_MPT3SAS_MAX_SGE": [
+      "128",
+      "n"
+    ],
+    "SCSI_MVSAS": [
+      "m",
+      "n"
+    ],
+    "SCSI_MVSAS_TASKLET": [
+      "y",
+      "n"
+    ],
+    "SCSI_MVUMI": [
+      "m",
+      "n"
+    ],
+    "SCSI_MYRB": [
+      "m",
+      "n"
+    ],
+    "SCSI_MYRS": [
+      "m",
+      "n"
+    ],
+    "SCSI_PM8001": [
+      "m",
+      "n"
+    ],
+    "SCSI_PMCRAID": [
+      "m",
+      "n"
+    ],
+    "SCSI_QLA_FC": [
+      "m",
+      "n"
+    ],
+    "SCSI_QLA_ISCSI": [
+      "m",
+      "n"
+    ],
+    "SCSI_QLOGIC_1280": [
+      "m",
+      "n"
+    ],
+    "SCSI_SAS_ATA": [
+      "y",
+      "n"
+    ],
+    "SCSI_SMARTPQI": [
+      "m",
+      "n"
+    ],
+    "SCSI_SNIC": [
+      "m",
+      "n"
+    ],
+    "SCSI_STEX": [
+      "m",
+      "n"
+    ],
+    "SCSI_SYM53C8XX_2": [
+      "m",
+      "n"
+    ],
+    "SCSI_SYM53C8XX_DEFAULT_TAGS": [
+      "16",
+      "n"
+    ],
+    "SCSI_SYM53C8XX_DMA_ADDRESSING_MODE": [
+      "1",
+      "n"
+    ],
+    "SCSI_SYM53C8XX_MAX_TAGS": [
+      "64",
+      "n"
+    ],
+    "SCSI_SYM53C8XX_MMIO": [
+      "y",
+      "n"
+    ],
+    "SCSI_VIRTIO": [
+      "m",
+      "n"
+    ],
+    "SCSI_WD719X": [
+      "m",
+      "n"
+    ],
+    "SECURITY_INFINIBAND": [
+      "y",
+      "n"
+    ],
+    "SENSORS_DRIVETEMP": [
+      "m",
+      "n"
+    ],
+    "SERIAL_8250_CS": [
+      "m",
+      "n"
+    ],
+    "SFC": [
+      "m",
+      "n"
+    ],
+    "SFC_FALCON": [
+      "m",
+      "n"
+    ],
+    "SFC_FALCON_MTD": [
+      "y",
+      "n"
+    ],
+    "SFC_MCDI_MON": [
+      "y",
+      "n"
+    ],
+    "SFC_MTD": [
+      "y",
+      "n"
+    ],
+    "SFC_SIENA": [
+      "m",
+      "n"
+    ],
+    "SFC_SIENA_MCDI_LOGGING": [
+      "y",
+      "n"
+    ],
+    "SFC_SIENA_MCDI_MON": [
+      "y",
+      "n"
+    ],
+    "SFC_SIENA_MTD": [
+      "y",
+      "n"
+    ],
+    "SFC_SIENA_SRIOV": [
+      "y",
+      "n"
+    ],
+    "SFC_SRIOV": [
+      "y",
+      "n"
+    ],
+    "SND_AMD_ACP_CONFIG": [
+      "m",
+      "n"
+    ],
+    "SND_AMD_ASOC_ACP63": [
+      "m",
+      "n"
+    ],
+    "SND_AMD_ASOC_ACP70": [
+      "m",
+      "n"
+    ],
+    "SND_AMD_ASOC_REMBRANDT": [
+      "m",
+      "n"
+    ],
+    "SND_AMD_ASOC_RENOIR": [
+      "m",
+      "n"
+    ],
+    "SND_AMD_SOUNDWIRE_ACPI": [
+      "m",
+      "n"
+    ],
+    "SND_BEBOB": [
+      "m",
+      "n"
+    ],
+    "SND_COMPRESS_OFFLOAD": [
+      "m",
+      "n"
+    ],
+    "SND_DICE": [
+      "m",
+      "n"
+    ],
+    "SND_DMAENGINE_PCM": [
+      "m",
+      "n"
+    ],
+    "SND_FIREFACE": [
+      "m",
+      "n"
+    ],
+    "SND_FIREWIRE": [
+      "y",
+      "n"
+    ],
+    "SND_FIREWIRE_DIGI00X": [
+      "m",
+      "n"
+    ],
+    "SND_FIREWIRE_LIB": [
+      "m",
+      "n"
+    ],
+    "SND_FIREWIRE_MOTU": [
+      "m",
+      "n"
+    ],
+    "SND_FIREWIRE_TASCAM": [
+      "m",
+      "n"
+    ],
+    "SND_FIREWORKS": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_CIRRUS_SCODEC": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_EXT_CORE": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_SCODEC_CS35L41": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_SCODEC_CS35L41_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_SCODEC_CS35L41_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_SCODEC_CS35L56": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_SCODEC_CS35L56_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_SCODEC_CS35L56_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_SCODEC_TAS2781": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_SCODEC_TAS2781_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_HDA_SCODEC_TAS2781_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_ISIGHT": [
+      "m",
+      "n"
+    ],
+    "SND_OXFW": [
+      "m",
+      "n"
+    ],
+    "SND_SIMPLE_CARD": [
+      "m",
+      "n"
+    ],
+    "SND_SIMPLE_CARD_UTILS": [
+      "m",
+      "n"
+    ],
+    "SND_SOC": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AC97_BUS": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_AC97_CODEC": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ACPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ACPI_AMD_MATCH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ACPI_INTEL_MATCH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ACPI_INTEL_SDCA_QUIRKS": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADAU1373": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADAU1761": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADAU1761_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADAU1761_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADAU17X1": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADAU7002": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADAU7118": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADAU7118_HW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADAU7118_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADAU_UTILS": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADI_AXI_I2S": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ADI_AXI_SPDIF": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AK4619": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AK5558": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP3x": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP5x": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP63_TOPLEVEL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP6x": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACPI_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP_I2S": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP_LEGACY_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP_PCI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP_PCM": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ACP_PDM": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_CZ_DA7219MX98357_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_CZ_RT5645_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_LEGACY_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_LEGACY_SDW_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_MACH_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_PS": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_PS_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_RENOIR": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_RENOIR_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_RPL_ACP6x": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_RV_RT5682_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_SDW_MACH_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_SOF_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_SOF_SDW_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_SOUNDWIRE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_SOUNDWIRE_LINK_BASELINE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_ST_ES8336_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_VANGOGH_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AMD_YC_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ARIZONA": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AUDIO_IIO_AUX": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AW8738": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AW87390": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AW88081": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AW88166": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AW88261": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AW88395": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AW88395_LIB": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_AW88399": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_BD28623": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_BT_SCO": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CHV3_CODEC": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CHV3_I2S": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_COMPRESS": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_CROS_EC_CODEC": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L34": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L35": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L36": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L41": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L41_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L41_LIB": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L41_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L45": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L45_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L45_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L56": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L56_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L56_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L56_SHARED": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS35L56_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS40L50": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS4234": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS42L42": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS42L42_CORE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS42L42_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS42L43": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS42L43_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS42L83": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS42L84": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS43130": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS48L32": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS530X": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS530X_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CS_AMP_LIB": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_CX2072X": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_DA7213": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_DA7219": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_DMIC": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES7134": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES8311": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES8316": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES8323": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES8326": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES8328": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES8328_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES8328_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES8375": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES8389": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ES83XX_DSM_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_GENERIC_DMAENGINE_PCM": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_HDA": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_HDAC_HDA": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_I2C_AND_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_IDT821034": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_DA7219": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_DMIC": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_ES8336": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_HDAUDIO": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_I2S_TEST": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_MAX98357A": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_MAX98373": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_MAX98927": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_NAU8825": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_PCM3168A": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_PROBE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_RT274": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_RT286": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_RT298": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_RT5514": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_RT5640": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_RT5663": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_RT5682": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_AVS_MACH_SSM4567": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_BDW_RT5650_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_BDW_RT5677_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_BROADWELL_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_BYTCR_RT5640_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_BYTCR_RT5651_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_BYTCR_WM5102_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_BYT_CHT_CX2072X_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_BYT_CHT_DA7213_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_BYT_CHT_ES8316_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_BYT_CHT_NOCODEC_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_CATPT": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_CHT_BSW_MAX98090_TI_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_CHT_BSW_NAU8824_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_CHT_BSW_RT5645_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_CHT_BSW_RT5672_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_CML_LP_DA7219_MAX98357A_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_EHL_RT5660_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_GLK_DA7219_MAX98357A_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_GLK_RT5682_MAX98357A_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_HASWELL_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_HDA_DSP_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_MACH": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_INTEL_SKL_HDA_DSP_GENERIC_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_BOARD_HELPERS": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_CIRRUS_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_CML_RT1011_RT5682_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_CS42L42_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_DA7219_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_ES8336_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_MAXIM_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_NAU8825_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_NUVOTON_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_PCM512x_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_REALTEK_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_RT5682_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_SSP_AMP_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOF_WM8804_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SOUNDWIRE_SOF_MACH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_INTEL_SST_TOPLEVEL": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_INTEL_USER_FRIENDLY_LONG_NAMES": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_MAX9759": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98088": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98090": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98357A": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98363": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98373": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98373_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98373_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98388": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98390": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98396": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98520": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX9867": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MAX98927": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_MT6357": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_NAU8315": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_NAU8325": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_NAU8540": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_NAU8821": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_NAU8824": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_NAU8825": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_NTP8835": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_NTP8918": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_NTPFW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM1754": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM1789": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM1789_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM186X": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM186X_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM186X_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM3060": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM3060_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM3060_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM3168A": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM3168A_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM512x": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM512x_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PCM6240": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PM4125": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_PM4125_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RL6231": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RL6347A": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT1011": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT1015": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT1015P": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT1017_SDCA_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT1019": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT1308": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT1308_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT1316_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT1318_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT1320_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT274": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT286": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT298": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5514": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5640": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5645": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5651": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5659": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5660": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5663": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5670": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5677": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5677_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5682": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5682S": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5682_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT5682_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT700": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT700_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT711": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT711_SDCA_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT711_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT712_SDCA_DMIC_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT712_SDCA_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT715": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT715_SDCA_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT715_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT721_SDCA_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT722_SDCA_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT9123": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT9123P": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RTQ9124": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RTQ9128": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_RT_SDW_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SDCA": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SDCA_HID": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_SDCA_IRQ": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_SDCA_OPTIONAL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SDW_UTILS": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SIGMADSP": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SIGMADSP_REGMAP": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SIMPLE_AMPLIFIER": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SIMPLE_MUX": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SMA1303": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SMA1307": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_ACPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_ACPI_DEV": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_ACP_PROBES": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_ALDERLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_AMD_ACP63": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_AMD_ACP70": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_AMD_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_AMD_REMBRANDT": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_AMD_RENOIR": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_AMD_SOUNDWIRE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_AMD_SOUNDWIRE_LINK_BASELINE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_AMD_TOPLEVEL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_AMD_VANGOGH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_APOLLOLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_BAYTRAIL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_BROADWELL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_CANNONLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_CLIENT": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_COFFEELAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_COMETLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_DEBUG_PROBES": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_ELKHARTLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_GEMINILAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_HDA": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_HDA_AUDIO_CODEC": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_SOF_HDA_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_HDA_GENERIC": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_HDA_LINK": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_SOF_HDA_LINK_BASELINE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_HDA_MLINK": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_HDA_PROBES": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_ICELAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_APL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_ATOM_HIFI_EP": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_CNL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_HIFI_EP_IPC": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_ICL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_LNL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_MTL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_PTL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_SKL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_SOUNDWIRE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_SOUNDWIRE_LINK_BASELINE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_TGL": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_INTEL_TOPLEVEL": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_SOF_IPC3": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_SOF_IPC4": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_SOF_JASPERLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_KABYLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_LUNARLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_MERRIFIELD": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_METEORLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_PANTHERLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_PCI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_PCI_DEV": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_PROBE_WORK_QUEUE": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_SOF_SKYLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_TIGERLAKE": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SOF_TOPLEVEL": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_SOF_XTENSA": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SPDIF": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_SSM4567": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS2562": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS2764": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS2770": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS2780": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS2781_COMLIB": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS2781_COMLIB_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS2781_FMWLIB": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS2781_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS2783_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS5805M": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TAS6424": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TDA7419": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TLV320ADC3XXX": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TLV320ADCX140": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TLV320AIC32X4": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TLV320AIC32X4_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TLV320AIC32X4_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TOPOLOGY": [
+      "y",
+      "n"
+    ],
+    "SND_SOC_TS3A227E": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_TSCS42XX": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_UDA1342": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WCD937X": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WCD937X_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WCD939X": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WCD939X_SDW": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WCD_CLASSH": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WCD_COMMON": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WCD_MBHC": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WM5102": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WM8524": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WM8731": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WM8731_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WM8731_SPI": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WM8804": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WM8804_I2C": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WM8940": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WM8961": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WM_ADSP": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WSA883X": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_WSA884X": [
+      "m",
+      "n"
+    ],
+    "SND_SOC_ZL38060": [
+      "m",
+      "n"
+    ],
+    "SND_SOF_SOF_HDA_SDW_BPT": [
+      "m",
+      "n"
+    ],
+    "SND_SST_ATOM_HIFI2_PLATFORM": [
+      "m",
+      "n"
+    ],
+    "SND_SST_ATOM_HIFI2_PLATFORM_ACPI": [
+      "m",
+      "n"
+    ],
+    "SOUNDWIRE": [
+      "m",
+      "n"
+    ],
+    "SOUNDWIRE_AMD": [
+      "m",
+      "n"
+    ],
+    "SOUNDWIRE_CADENCE": [
+      "m",
+      "n"
+    ],
+    "SOUNDWIRE_GENERIC_ALLOCATION": [
+      "m",
+      "n"
+    ],
+    "SOUNDWIRE_INTEL": [
+      "m",
+      "n"
+    ],
+    "SPEAKUP": [
+      "m",
+      "n"
+    ],
+    "SPEAKUP_SYNTH_ACNTSA": [
+      "m",
+      "n"
+    ],
+    "SPEAKUP_SYNTH_APOLLO": [
+      "m",
+      "n"
+    ],
+    "SPEAKUP_SYNTH_AUDPTR": [
+      "m",
+      "n"
+    ],
+    "SPEAKUP_SYNTH_BNS": [
+      "m",
+      "n"
+    ],
+    "SPEAKUP_SYNTH_DECTLK": [
+      "m",
+      "n"
+    ],
+    "SPEAKUP_SYNTH_LTLK": [
+      "m",
+      "n"
+    ],
+    "SPEAKUP_SYNTH_SOFT": [
+      "m",
+      "n"
+    ],
+    "SPEAKUP_SYNTH_SPKOUT": [
+      "m",
+      "n"
+    ],
+    "SPEAKUP_SYNTH_TXPRT": [
+      "m",
+      "n"
+    ],
+    "SSB_PCMCIAHOST": [
+      "y",
+      "n"
+    ],
+    "SSB_PCMCIAHOST_POSSIBLE": [
+      "y",
+      "n"
+    ],
+    "SUNRPC_XPRT_RDMA": [
+      "m",
+      "n"
+    ],
+    "TCM_FC": [
+      "m",
+      "n"
+    ],
+    "TCM_QLA2XXX": [
+      "m",
+      "n"
+    ],
+    "TIGON3": [
+      "m",
+      "n"
+    ],
+    "TIGON3_HWMON": [
+      "y",
+      "n"
+    ],
+    "USB4": [
+      "m",
+      "n"
+    ],
+    "USB4_NET": [
+      "m",
+      "n"
+    ],
+    "VIDEO_TDA1997X": [
+      "m",
+      "n"
+    ],
+    "VMWARE_PVSCSI": [
+      "m",
+      "n"
+    ],
+    "XEN_SCSI_FRONTEND": [
+      "m",
+      "n"
+    ],
+    "YENTA": [
+      "m",
+      "n"
+    ]
+  }
+}

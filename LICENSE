@@ -1,0 +1,19 @@
+Licensing for Gentoo for MacBook8,1
+
+Copyright (c) 2026 Veyra, Technically LLC and contributors.
+
+The original standalone software, build scripts, configuration and documentation
+in this release are available under the MIT licence in licences/MIT.txt, except
+where an individual file states otherwise.
+
+kernel/ec-wake is GPL-2.0-only. The Linux patches are derivative works of their
+respective Linux source files and retain their upstream GPL-compatible terms.
+In particular the Linux kernel as a combined work is GPL-2.0-only; this project
+does not offer an MIT licence for the Linux kernel or third-party contributions.
+The GNU GPL version 2 is reproduced in licences/GPL-2.0.txt.
+
+Third-party upstream sources fetched by the build retain their original licence
+notices. Firmware, hardware calibration, Gentoo packages and external source
+archives are not included in the source release and are not relicensed by this
+file. See CREDITS.md and docs/FIRMWARE.md for individual provenance and unresolved
+redistribution questions.

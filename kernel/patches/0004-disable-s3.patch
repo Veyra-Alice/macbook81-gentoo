@@ -1,0 +1,24 @@
+--- a/drivers/acpi/sleep.c
++++ b/drivers/acpi/sleep.c
+@@ -866,11 +866,20 @@
+ 	bool suspend_ops_needed = false;
+ 	int i;
+ 
+-	for (i = ACPI_STATE_S1; i < ACPI_STATE_S4; i++)
++	for (i = ACPI_STATE_S1; i < ACPI_STATE_S4; i++) {
++		/* This Mac loses its internal SPI input devices across S3.
++		 * Keep the validated s2idle path; do not advertise broken S3.
++		 */
++		if (i == ACPI_STATE_S3 &&
++		    dmi_match(DMI_PRODUCT_NAME, "MacBook8,1")) {
++			pr_info("MacBook8,1: ACPI S3 disabled; use suspend-to-idle\n");
++			continue;
++		}
+ 		if (acpi_sleep_state_supported(i)) {
+ 			sleep_states[i] = 1;
+ 			suspend_ops_needed = true;
+ 		}
++	}
+ 
+ 	if (suspend_ops_needed)
+ 		suspend_set_ops(old_suspend_ordering ?

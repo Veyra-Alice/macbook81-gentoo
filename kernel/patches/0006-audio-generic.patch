@@ -1,0 +1,26 @@
+--- a/sound/hda/codecs/generic.c
++++ b/sound/hda/codecs/generic.c
+@@ -1,3 +1,4 @@
++#include <linux/dmi.h>
+ // SPDX-License-Identifier: GPL-2.0-or-later
+ /*
+  * Universal Interface for Intel High Definition Audio Codec
+@@ -6033,10 +6034,14 @@
+ 	init_multi_out(codec);
+ 	init_extra_out(codec);
+ 	init_multi_io(codec);
+-	init_aamix_paths(codec);
+-	init_analog_input(codec);
+-	init_input_src(codec);
+-	init_digital(codec);
++	/* MB8,1 speaker experiment: retain EFI's CS4208 clock/TDM state. */
++	if (!(codec->core.vendor_id == 0x10134208 &&
++	      dmi_match(DMI_PRODUCT_NAME, "MacBook8,1"))) {
++		init_aamix_paths(codec);
++		init_analog_input(codec);
++		init_input_src(codec);
++		init_digital(codec);
++	}
+ 
+ 	clear_unsol_on_unused_pins(codec);
+ 

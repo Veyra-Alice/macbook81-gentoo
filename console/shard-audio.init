@@ -1,0 +1,16 @@
+#!/sbin/openrc-run
+# SPDX-License-Identifier: MIT
+description="MacBook8,1 console audio output and headphone routing"
+supervisor="supervise-daemon"
+command="/usr/bin/python3"
+command_args="/opt/macbook81/shard-audio.py"
+respawn_delay=3
+respawn_max=3
+respawn_period=60
+output_log="/var/log/shard-audio.log"
+error_log="/var/log/shard-audio.log"
+depend() {
+    need udev
+    after alsasound
+    before shard-hotkeys
+}

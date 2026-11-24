@@ -1,0 +1,46 @@
+{
+  "date": "2026-11-23",
+  "source_preparation": "passed: pinned pristine archive, six patches, no fuzz",
+  "configuration": "passed: required internal drivers and retained peripheral support",
+  "kernel_compile": "passed: rebuilt with software iSCSI/TCP and boot helpers restored; bzImage, all modules, staging and depmod completed",
+  "physical_regression": "partial pass: consolidated 1.0 kernel booted on physical MacBook8,1 to console with owner firmware; Ethernet, Wi-Fi association and camera enumeration observed; broader hardware checks pending",
+  "unit_tests": "6 tests passed, including target/symlink safeguards and deterministic packaging",
+  "public_iso": "private clean test ISO built and physically booted; public binary distribution not approved",
+  "python_syntax": "passed for every included Python source",
+  "shell_syntax": "passed for shell helpers, OpenRC scripts and build script",
+  "console_helper": "compiled with -Wall -Wextra -Werror; --help passed",
+  "source_allowlist": "passed: 65 reviewed text/source files",
+  "upstream_warnings": "Speaker source emits unused-function and missing-prototype warnings; no warning-free claim",
+  "kernel_release": "6.18.64-macbook81-1.0.0",
+  "kernel_sha256": "e0c2fd2709a21ff044721d11d2f9de838f69e2d74f3e13ccb3c746702b9f4e0a",
+  "external_module_vermagic": {
+    "macbook81_ec_wake": "6.18.64-macbook81-1.0.0 SMP preempt mod_unload",
+    "facetimehd": "6.18.64-macbook81-1.0.0 SMP preempt mod_unload"
+  },
+  "staged_module_count": 4065,
+  "staged_external_modules": {
+    "macbook81_ec_wake": "6.18.64-macbook81-1.0.0 SMP preempt mod_unload",
+    "facetimehd": "6.18.64-macbook81-1.0.0 SMP preempt mod_unload"
+  },
+  "clean_live_boot": "passed: read-only USB/RAM-copy probe reached live root and OpenRC; physical MacBook live console and SSH handoff also succeeded",
+  "installed_console_geometry": {
+    "state": "passed through physical reboot",
+    "font": "16x32",
+    "rows": 45,
+    "columns": 144,
+    "helper_exit_status": 0,
+    "helper_exit_monotonic_usec": 10983890,
+    "getty_active_monotonic_usec": 12055434,
+    "failed_systemd_units": 0,
+    "scope": "Support recipe stages source and unit; documented target compile and service enablement exercised on hardware. Fresh full reinstall not performed."
+  },
+  "installed_login_banner": {
+    "state": "passed through observed reboot",
+    "util_linux": "2.42.3",
+    "finding": "Repeated banners with clock escape during network startup; getty restart count zero.",
+    "mitigation": "Remove only clock escape from /etc/issue, preserving a backup.",
+    "validation": "Physical tester confirmed repeated login prompts stopped after next boot.",
+    "upstream_reference": "https://github.com/util-linux/util-linux/issues/4306",
+    "delivery": "Documented manual target step; staging does not replace login banner."
+  }
+}

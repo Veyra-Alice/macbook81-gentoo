@@ -1,0 +1,40 @@
+--- a/cs420x.c
++++ b/cs420x.c
+@@ -47,6 +47,9 @@
+ 	struct timespec64 first_play_time;
+ 	int playing;
+ 	int is_macbook81;
++	bool headset_active;
++	unsigned int headset_pin_ctl, headset_pin_power, headset_adc_power;
++	unsigned int headset_adc_sel, headset_amp_left, headset_amp_right;
+ };
+ 
+ /* available models with CS420x */
+@@ -871,6 +874,8 @@
+ 	return err;
+ }
+ 
++#include "macbook81-headset-pcm.h"
++
+ static int cs_mb81_build_pcms(struct hda_codec *codec)
+ {
+ 	struct cs_spec *spec = codec->spec;
+@@ -891,6 +896,18 @@
+ 		tdm_info->stream[SNDRV_PCM_STREAM_PLAYBACK] = cs4208_pcm_tdm_playback;
+ 		tdm_info->stream[SNDRV_PCM_STREAM_PLAYBACK].nid = 0x0a;
+ 		tdm_info->pcm_type = HDA_PCM_TYPE_AUDIO;
++
++		/* Separate opt-in test endpoint; no microphone bias at driver init. */
++		if (dmi_match(DMI_PRODUCT_NAME, "MacBook8,1") &&
++		    codec->core.subsystem_id == 0x106b6400) {
++			struct hda_pcm *headset;
++
++			headset = snd_hda_codec_pcm_new(codec, "CS4208 Headset Test");
++			if (!headset)
++				return -ENOMEM;
++			headset->stream[SNDRV_PCM_STREAM_CAPTURE] = mb81_headset_capture;
++			headset->pcm_type = HDA_PCM_TYPE_AUDIO;
++		}
+ 	}
+ 
+ 	return 0;

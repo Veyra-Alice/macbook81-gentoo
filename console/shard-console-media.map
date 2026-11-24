@@ -1,0 +1,10 @@
+# SPDX-License-Identifier: MIT
+# Let the evdev helper handle media keys without console escape sequences.
+# Ordinary F1-F12 (accessed with Fn on this machine) are unaffected.
+keycode 113 = VoidSymbol
+keycode 114 = VoidSymbol
+keycode 115 = VoidSymbol
+keycode 224 = VoidSymbol
+keycode 225 = VoidSymbol
+keycode 229 = VoidSymbol
+keycode 230 = VoidSymbol

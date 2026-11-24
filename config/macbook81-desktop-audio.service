@@ -1,0 +1,15 @@
+# SPDX-License-Identifier: MIT
+[Unit]
+Description=MacBook8,1 analogue headphone routing
+After=pipewire.service wireplumber.service
+Wants=pipewire.service wireplumber.service
+PartOf=graphical-session.target
+ConditionPathExists=/sys/class/dmi/id/product_name
+
+[Service]
+ExecStart=/usr/local/bin/macbook81-desktop-audio.py
+Restart=on-failure
+RestartSec=3
+
+[Install]
+WantedBy=graphical-session.target

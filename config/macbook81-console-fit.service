@@ -1,0 +1,13 @@
+# SPDX-License-Identifier: MIT
+[Unit]
+Description=Fit MacBook8,1 text console to its native panel
+Wants=systemd-udev-settle.service
+After=systemd-udev-settle.service systemd-vconsole-setup.service
+Before=getty.target getty@tty1.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/fit-macbook81-console
+
+[Install]
+WantedBy=multi-user.target

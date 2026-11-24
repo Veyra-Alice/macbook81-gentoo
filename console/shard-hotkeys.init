@@ -1,0 +1,16 @@
+#!/sbin/openrc-run
+# SPDX-License-Identifier: MIT
+description="MacBook8,1 console brightness and volume keys"
+command="/usr/bin/python3"
+command_args="/opt/macbook81/shard-hotkeys.py"
+command_background="yes"
+pidfile="/run/shard-hotkeys.pid"
+output_log="/var/log/shard-hotkeys.log"
+error_log="/var/log/shard-hotkeys.log"
+depend() {
+    need udev
+    after keymaps
+}
+start_pre() {
+    /usr/bin/loadkeys -q -C /dev/tty0 /opt/macbook81/shard-console-media.map
+}

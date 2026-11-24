@@ -1,0 +1,12 @@
+# SPDX-License-Identifier: MIT
+# Merge with these existing BlueZ sections; do not create duplicate sections.
+# Tested together with fresh bonds and stopping discovery after pairing.
+[General]
+Privacy=device
+JustWorksRepairing=confirm
+
+[LE]
+MinConnectionInterval=7
+MaxConnectionInterval=9
+ConnectionLatency=0
+ConnectionSupervisionTimeout=200

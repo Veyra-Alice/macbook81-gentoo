@@ -1,0 +1,28 @@
+--- a/drivers/tty/serdev/core.c
++++ b/drivers/tty/serdev/core.c
+@@ -7,6 +7,7 @@
+  */
+ 
+ #include <linux/acpi.h>
++#include <linux/dmi.h>
+ #include <linux/errno.h>
+ #include <linux/idr.h>
+ #include <linux/kernel.h>
+@@ -707,6 +708,17 @@ static acpi_status acpi_serdev_add_device(acpi_handle handle, u32 level,
+ 	if (!adev || acpi_device_enumerated(adev))
+ 		return AE_OK;
+ 
++	/*
++	 * MacBook8,1 describes its SSD debug endpoint and Bluetooth as
++	 * children of the same UART. The debug endpoint has no Linux
++	 * consumer, but otherwise occupies serdev's single slave slot
++	 * before BCM2E7C can bind. Leave its ACPI methods available and
++	 * skip only its serial-device registration on this model.
++	 */
++	if (dmi_match(DMI_PRODUCT_NAME, "MacBook8,1") &&
++	    !strcmp(acpi_device_hid(adev), "APPLE-UART-SSDC"))
++		return AE_OK;
++
+ 	/* Skip if black listed */
+ 	if (!acpi_match_device_ids(adev, serdev_acpi_devices_blacklist))
+ 		return AE_OK;

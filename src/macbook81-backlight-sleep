@@ -1,0 +1,23 @@
+#!/bin/sh
+# SPDX-License-Identifier: MIT
+# systemd sleep hook: GNOME/logind own lid policy and suspend itself.
+[ "$(cat /sys/class/dmi/id/product_name)" = MacBook8,1 ] || exit 0
+led=/sys/class/leds/spi::kbd_backlight/brightness
+state=/run/macbook81-keyboard-brightness
+[ -w "$led" ] || exit 0
+case "$1" in
+    pre)
+        cat "$led" > "$state"
+        printf '0\n' > "$led"
+        ;;
+    post)
+        if [ -f "$state" ]; then
+            brightness=$(cat "$state")
+            case "$brightness" in
+                ''|*[!0-9]*) ;;
+                *) printf '%s\n' "$brightness" > "$led" ;;
+            esac
+            rm -f "$state"
+        fi
+        ;;
+esac

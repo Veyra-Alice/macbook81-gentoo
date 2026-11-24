@@ -1,0 +1,87 @@
+--- a/sound/hda/controllers/intel.c
++++ b/sound/hda/controllers/intel.c
+@@ -32,6 +32,7 @@
+ #include <linux/mutex.h>
+ #include <linux/io.h>
+ #include <linux/pm_runtime.h>
++#include <linux/suspend.h>
+ #include <linux/clocksource.h>
+ #include <linux/time.h>
+ #include <linux/completion.h>
+@@ -973,6 +974,24 @@
+ 	return true;
+ }
+ 
++/* Diagnostic opt-in: retain EFI's link through s2idle on this one board. */
++static bool macbook81_preserve_s2idle;
++module_param(macbook81_preserve_s2idle, bool, 0444);
++MODULE_PARM_DESC(macbook81_preserve_s2idle,
++	"Experimental MacBook8,1 s2idle controller/link preservation");
++
++static bool macbook81_keep_s2idle_link(struct azx *chip)
++{
++	struct pci_dev *pci = chip->pci;
++
++	return macbook81_preserve_s2idle &&
++		pm_suspend_target_state == PM_SUSPEND_TO_IDLE &&
++		dmi_match(DMI_PRODUCT_NAME, "MacBook8,1") &&
++		pci->vendor == 0x8086 && pci->device == 0x9ca0 &&
++		pci->subsystem_vendor == 0x8086 &&
++		pci->subsystem_device == 0x7270;
++}
++
+ static void __azx_runtime_resume(struct azx *chip)
+ {
+ 	struct hda_intel *hda = container_of(chip, struct hda_intel, chip);
+@@ -988,7 +1007,12 @@
+ 	status = azx_readw(chip, STATESTS);
+ 
+ 	azx_init_pci(chip);
+-	hda_intel_init_chip(chip, true);
++	if (chip->pm_prepared && macbook81_keep_s2idle_link(chip)) {
++		dev_info(chip->card->dev, "MacBook8,1: resume without link reset\n");
++		hda_intel_init_chip(chip, false);
++	} else {
++		hda_intel_init_chip(chip, true);
++	}
+ 
+ 	/* Avoid codec resume if runtime resume is for system suspend */
+ 	if (!chip->pm_prepared) {
+@@ -1048,7 +1072,18 @@
+ 		return 0;
+ 
+ 	chip = card->private_data;
+-	azx_shutdown_chip(chip);
++	if (macbook81_keep_s2idle_link(chip)) {
++		/* Stop DMA normally, but do not assert codec/link reset. Saving
++		 * PCI state here also prevents pci_pm_suspend_noirq() from
++		 * automatically preparing this controller for D3. The PCI core
++		 * observes D0 and keeps its parent powered during s2idle.
++		 */
++		__azx_shutdown_chip(chip, true);
++		pci_save_state(chip->pci);
++		dev_info(chip->card->dev, "MacBook8,1: s2idle preserving link and PCI D0\n");
++	} else {
++		azx_shutdown_chip(chip);
++	}
+ 
+ 	trace_azx_suspend(chip);
+ 	return 0;
+@@ -2017,7 +2052,17 @@
+ 
+ 	snd_hdac_i915_set_bclk(bus);
+ 
++
++	if (dmi_match(DMI_PRODUCT_NAME, "MacBook8,1") &&
++	    pci->vendor == 0x8086 && pci->device == 0x9ca0 &&
++	    pci->subsystem_vendor == 0x8086 && pci->subsystem_device == 0x7270) {
++		dev_info(card->dev, "MacBook8,1: attaching to running EFI link without reset\n");
++		hda_intel_init_chip(chip, false);
++		if (!azx_bus(chip)->codec_mask)
++			azx_bus(chip)->codec_mask = 1;
++	} else {
+ 	hda_intel_init_chip(chip, (probe_only[dev] & 2) == 0);
++	}
+ 
+ 	/* codec detection */
+ 	if (!azx_bus(chip)->codec_mask) {

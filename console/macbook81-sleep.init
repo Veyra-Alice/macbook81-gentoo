@@ -1,0 +1,15 @@
+#!/sbin/openrc-run
+# SPDX-License-Identifier: MIT
+description="MacBook8,1 live-console suspend preparation"
+
+depend() {
+    need modules
+    before acpid
+}
+
+start() {
+    ebegin "Preparing MacBook8,1 suspend-to-idle and EC wake"
+    /sbin/modprobe macbook81_ec_wake &&
+        printf '%s\n' s2idle > /sys/power/mem_sleep
+    eend $?
+}
